@@ -1,0 +1,26 @@
+version: '3'
+
+#env_file:
+#  - ./.env
+
+networks:
+    #frontend:
+    backend:
+
+services:
+    app:
+        build: ./services/app/build/
+        #mem_limit: 2g
+        #memswap_limit: 0
+        tty: true
+        #stdin_open: false
+        #ports:
+        #    - 21900:9000
+        volumes:
+            - ${APP_PATH}:/var/www/project:rw
+            - ./usr/local/etc/php/conf.d/zz-php.ini:/usr/local/etc/php/conf.d/zz-php.ini
+            - ./usr/local/etc/php-fpm.d/zz-docker.conf:/usr/local/etc/php-fpm.d/zz-docker.conf
+        #depends_on:
+        #    - mariadb
+        networks:
+            - backend
