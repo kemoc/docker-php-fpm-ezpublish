@@ -2,6 +2,8 @@
 
 eZPublish PHP-FPM configuration with Docker.
 
+Repo: https://github.com/kemoc/docker-php-fpm-ezpublish
+
 ## Crete non DIST files
 
 Copy and rename:
