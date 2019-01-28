@@ -9,7 +9,7 @@ networks:
 
 services:
     app:
-        build: ./services/app/build/
+        build: ./build/
         #mem_limit: 2g
         #memswap_limit: 0
         tty: true
