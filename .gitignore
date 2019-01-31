@@ -1,1 +1,2 @@
 /.env
+/usr/local/etc/php/conf.d/zz-php.ini
